@@ -1,8 +1,9 @@
 # Para
 
-A jeepney commute app for the Philippines. Para puts every jeepney route on a
-map, plans trips with transfers, tells you the fare before you ride, shows
-live jeeps coming your way, and wakes you up before your stop.
+A commute app for the Philippines. Para puts every route on a map
+(jeepneys, buses, UV Express, the LRT/MRT, ferries and tricycles), plans trips
+with transfers across them, tells you the fare before you ride, shows live
+vehicles coming your way, and wakes you up before your stop.
 
 Free for commuters, no ads. Flutter app, Supabase (Postgres + PostGIS)
 backend, Next.js admin panel. In development, heading to Google Play and the
@@ -13,7 +14,7 @@ how it's built, and some of the problems worth solving along the way. I'm
 happy to walk through the code in an interview.
 
 <p>
-  <img src="screenshots/map.png" width="220" alt="Map with jeepney routes">
+  <img src="screenshots/map.png" width="220" alt="Map with commute routes">
   <img src="screenshots/route.png" width="220" alt="Route details with its signboard">
   <img src="screenshots/planner.png" width="220" alt="Trip planner with trip options">
   <img src="screenshots/trip.png" width="220" alt="Trip details, step by step">
@@ -21,16 +22,17 @@ happy to walk through the code in an interview.
 <p>
   <img src="screenshots/fare.png" width="220" alt="Fare check printed as a receipt">
   <img src="screenshots/driver.png" width="220" alt="Driver Mode">
-  <img src="screenshots/collection.png" width="220" alt="Jeepney collection with stamps">
+  <img src="screenshots/collection.png" width="220" alt="Ride collection with stamps">
   <img src="screenshots/map-dark.png" width="220" alt="The map in dark mode">
 </p>
 
 ## Why
 
-Jeepneys carry millions of people a day, but they have no timetable, no
-fixed stops and no official map. You learn the routes by asking. Para turns
-that into something you can search: where the routes go, which one to take,
-how much it costs, and where the next jeep is right now.
+A commute in Metro Manila or Rizal is often two or three rides on different
+kinds of transport. Jeepneys, UV Express and most buses have no timetable, no
+fixed stops and no official map; you learn the routes by asking. Para turns
+that into something you can search: where the routes go, which ones to take,
+how much it costs, and where the next ride is right now.
 
 ## What it does
 
@@ -44,20 +46,20 @@ how much it costs, and where the next jeep is right now.
   works offline.
 - Fares from the official fare matrices (regular, student, senior, PWD),
   station-to-station tables for trains, and an overcharge check.
-- Live jeeps from drivers in Driver Mode, with ETAs to each stop.
+- Live vehicles from drivers in Driver Mode and riders who share the ride
+  they're on, with ETAs to each stop.
 - Para Alarm: the phone vibrates before your stop, even in your pocket.
 - Step-free trips for wheelchair users, using only accessible routes and
   stations with working lifts.
 - Road reports (floods, closures, strikes) that the planner routes around.
-- Pasabuy parcels: send a small package with a driver on the route.
 - Share your trip as a live link, an SOS button, lost and found.
-- English and Filipino, 200% text size and screen readers supported.
+- English, Filipino and Bisaya, 200% text size and screen readers supported.
 
 **For drivers and operators**
 - Driver Mode: pick a route once and put the phone away. Location is shared
   in the background, throttled for battery and data, and stops by itself.
 - Earnings log, a printable QR Ph fare label, dispatcher messages.
-- Fleet dashboard for operators: jeeps on the road, trips per day, busy
+- Fleet dashboard for operators: vehicles on the road, trips per day, busy
   hours, maintenance, broadcasts.
 
 **For staff and local governments**
